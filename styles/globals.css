@@ -1,0 +1,449 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+.box1{ 
+  background: white;
+  height: auto;
+} 
+ .logincontainer{
+   width: 400px;
+   background-color: white;
+   padding: 10px 5px 10px 5px; 
+   border-radius: 15px;
+   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+   
+ }
+.header{
+  padding: 15px 0px 15px 0px;
+  font-weight: 900;
+
+}
+ 
+.mediaicons{
+  padding: 10px;
+
+}
+.mediaicons button{
+  background: white;
+  margin: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.breakline{
+  margin: 0px;
+  padding: 0px;
+  color: rgba(227, 232, 248, 0.948);
+}
+ .inputbox input{
+   padding: 15px;
+   margin: 5px;
+   border: none;
+   border-radius:8px ;
+   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+   width: 350px;
+
+ }
+ .confirmation{
+   padding: 15px;
+   font-weight: 400;
+ }
+ .confirmation input{
+   margin-right: 8px;
+ }
+ .subitbutt{
+   width: 300px;
+   font-weight: 500;
+   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+   
+ }
+ .signupbtn{
+   border: none;
+   text-decoration: underline;
+   color:#B327AC;
+   background: transparent;
+ }
+ .forgetpassbtn{
+  border: none;
+  text-decoration: underline;
+  color:#B327AC;
+  background: transparent;
+}
+
+
+.forgettext p{
+  font-weight:500;
+  font-size: 12px;
+}
+
+/* resetpass  */
+.resetinstru{
+  font-size: 10px;
+}
+.resetpassbox input{
+  padding: 10px;
+  margin: 5px;
+  border: none;
+  border-radius:8px ;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  width: 200px;
+  text-align: center;
+}
+.resendpin button{
+  background-color: rgb(236, 230, 230);
+  color:black;
+  border: none;
+}
+.resendpin button:hover{
+  background-color: rgb(236, 230, 230);
+  color:black;
+}
+
+/* dashborad */
+.parent-box{ 
+  background-color:white;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+
+ 
+}
+.parent-box1{
+  background-color: rgb(242, 238, 250); 
+  width: 100%;
+  margin: 0px;
+  box-shadow: rgba(100, 100, 111, 0.2) 2px  2px 2x 2px;
+  /* padding: 15px 15px 15px 15px; */
+
+ } 
+.dashbuttoncontainer{ 
+  padding: 10px;
+  /* margin: 12px 5px 12px 5px; */
+  background-color:white;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  width: 20%;
+  position:fixed;
+
+}
+.btn-primary{
+  background-color: #B327AC;
+  border: 0px;
+  transition: 0.3s;
+}
+.btn-primary:hover{
+  background-color: #fff;
+  color: #B327AC;
+  border: 2px solid #B327AC;
+}
+.dashbuttoncontainer button{
+  width: 100%;
+  background: white;
+  color: black;
+  border-radius: 7px;
+  border: none;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  padding: 16px 32px;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition: 0.3s;
+}
+.dashbuttoncontainer button:hover{ 
+   background-color: #B327AC;
+   color: white;
+   font-weight: 500; 
+}
+/* .home tab content{  
+   
+} */
+.homeheader{
+  margin: 10px 10px 10px 10px;
+  padding: 10px;
+  background-color:#f0f0f0;
+
+  
+
+}
+.homebox{
+ border-radius: 10px;
+ margin: 5px 15px 5px 5px;
+ padding: 10px 10px 10px 10px;
+ font-weight: 500;
+ }
+ .homeboxcotent{
+   padding-left:15px;
+   border-radius: 20px;
+   box-shadow: 1px 1px 11px 1px #eee;
+ }
+ .container-1{
+  background-image: linear-gradient(to right, #B327AC, #B327AC90);
+
+ }
+ .container-2{
+  background-image: linear-gradient(to right, #B327AC90, #B327AC70);
+
+ }
+ .container-3{
+  background-image: linear-gradient(to right, #B327AC70, #B327AC50);
+
+ }
+ .homeboxcotent .inner{
+  margin: 15px;
+ }
+ .homeboxcotent1 h2{
+   color: #B327AC;
+ }
+ .homeboxcotent2{
+  padding:20px 5px 5px 5px;
+ }
+ .homeboxcotent2 h5{
+  color: #B327AC;
+}
+.homeboxcotent2 i{
+  color: gold;
+}
+.homeboxcotent3{
+  padding:20px 5px 5px 5px;
+ }
+ .homeboxcotent3 h5{
+  color: #B327AC;
+}
+ 
+
+.categoriesbox {
+  border-radius: 10px;
+  padding: 7px 7px 7px 12px;
+  background-color: white;
+  border: 1px solid #B327AC;
+  /* font-weight: 500; */
+  /* font-size: 14; */
+} 
+.categorieslabel h6{    
+  padding: 5px; 
+  text-align: center; 
+  font-weight: 500;
+  margin-bottom: 10px;
+  /* font-size: 15px; */
+  
+}
+.categoriesicon i{
+  background-color:#B327AC ;
+  color: white;
+  border: none;
+  border-radius: 114px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; 
+  padding: 8px;
+  text-align: center;
+  margin: 4px 3px 0px 0px;
+}
+.categoriesbtn button{
+  width: 80%;
+  text-align: center;
+  margin: 10px 0px 15px 10px;
+  background: transparent; 
+  color: black;
+  font-weight: 500;
+  border: none; 
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  padding: 10px;
+  border-radius: 10px;
+  
+}
+.categoriesemptybox{
+  margin: 0px;
+  padding: 0px;
+}
+.homenewsbox div{
+  box-shadow:  rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  border-radius: 10px;
+  margin: 5px 3px 5px 3px;
+  padding: 7px 7px 7px 12px;
+  background-color: white;
+}
+.homenewsbox img{
+  width: 80%;
+  float: center;
+  height: 40%;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; 
+  border-radius: 5px;
+  margin: 10px  0px 10px 0px;
+}
+
+
+
+
+
+/* navbar */
+ 
+.navbox{
+  background-color: #B327AC ;
+  /* position: fixed; */
+  padding: 10px 10px 10px 10px;
+  margin: 0px;
+  box-shadow:  rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  width: 100%;
+ 
+}
+.navbox button{
+  width: 100px;
+  box-shadow:  rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  font-weight: 500;
+  padding: 5px 10px 5px 10px;
+  float: right;
+}
+.navlogo{
+  color: white;
+  font-weight: 900;
+   
+
+}
+.navlogo i{
+  color: black;
+  font-weight: 900;
+
+}
+.navlinks p{
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+.navlinks p:hover{
+  color: black;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+
+
+
+/* alltip */
+
+.alltipsbox{
+  width: 100%;
+  /* background-color: rgb(242, 238, 250);  */
+  padding: 5px 0px 5px 0px; 
+}
+.alltipcategorybox{
+  padding: 10px;
+   /* background-color: rgb(242, 238, 250);  */
+}
+.alltipcategorybox{
+  background: white;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px; 
+  height: auto;
+
+}
+.alltipslabel h4{
+  padding: 10px;
+  margin: 6px 0px 10px 0px;
+  color: white;
+  font-weight:500 ;
+  background-color: #B327AC ;
+}
+.alltipseventname{
+  padding: 5px;
+
+}
+.alltipseventname i{
+  background-color:#B327AC ;
+  color: white;
+  border: none;
+  border-radius: 114px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; 
+  padding: 5px;
+  text-align: center;
+  margin: 2px 3px 2px 5px;
+}
+.alltipseventname p{
+  margin: 0px 0px 0px 5px;
+  font-weight: 300;
+  font-size: 15px;
+}
+.alltipsgame{
+  margin: 15px 0px 5px 0px;
+}
+.alltipsodd p{
+  padding: 4px;
+  background-color: black;
+  color: white;
+  font-weight: 500;
+  text-align: center;
+}
+.alltipspredict{
+  font-weight: 400;
+  text-align: center;
+}
+.alltipsicon i{
+  background-color:#B327AC ;
+  color: white;
+  border: none;
+  border-radius: 114px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; 
+  padding: 8px;
+  text-align: center;
+  margin: 2px 3px 2px 5px;
+}
+.alltipsbreakline{
+  padding: 4px;
+  background-color: rgb(242, 238, 250); 
+  margin: 0px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* footer  */
+.footer{
+  width: 100%;
+
+}
+.footerlogo h1{
+  color:#B327AC ;
+  font-weight:900 ;
+  font-size: 70px;
+  /* padding: 10px; */
+}
+.footerlogo i{
+  color: black;
+  font-weight: 500;
+  font-size:60px;
+}
+.footerlogo{
+  padding: 5px;
+  margin: 2px;
+}
+.footerlogo p{
+  font-style: italic;
+  font-weight: 500;
+}
+
+.footer-copyright{
+  background-color: black;
+  color: white;
+  font-weight: 500;
+  text-align: center;
+  padding: 10px;
+  margin: 10px 0px 5px 0px;
+  width: 100%;
+}
