@@ -213,7 +213,9 @@ body {
  .homeboxcotent3 h5{
   color: #B327AC;
 }
- 
+ .adImg{
+  object-fit: cover;
+ }
 
 .categoriesbox {
   border-radius: 10px;
@@ -446,4 +448,9 @@ body {
   padding: 10px;
   margin: 10px 0px 5px 0px;
   width: 100%;
+}
+@media screen and (max-width: 500px){
+  .secondimage{
+    display: none;
+  }
 }

@@ -1,5 +1,6 @@
 import Footer from "../api/footer";
 import Navbar from "./navbar";
+import Link from "next/link";
 import { useState, useEffect } from "react";
 function Freetips(){
     const [user, setUser] = useState({
@@ -8,7 +9,8 @@ function Freetips(){
         phone: "",
         status: "",
     });
-    const [freeTips, setFreeTips] = useState([])
+    const [freeTips, setFreeTips] = useState([]);
+    const [imglink, setImageLink] = useState("/1xbet-1.png");
     useEffect(() => {
         var isLoggedIn = localStorage.getItem("userIsLoggedIn");
         if(isLoggedIn === null || isLoggedIn === undefined){
@@ -22,7 +24,7 @@ function Freetips(){
             setUser(data);
             if(data.status === "Regular"){
                 alert("This page is not available for Regular members, please susbscribe for VIP Member");
-                window.location.href = "/v1/dashboard";
+                window.location.href = "/v1/profile";
             }
         })
 
@@ -33,16 +35,54 @@ function Freetips(){
         .then((data) => {
             setFreeTips(data)
         })
-
+        const images_ = [
+            {
+                id: 1,
+                image: "/1xbet-1.png"
+            },
+            {
+                id: 2,
+                image: "/1xbet-2.jpg"
+            },
+            {
+                id: 3,
+                image: "/1xbet-3.gif"
+            },
+            {
+                id: 4,
+                image: "/1xbet-4.gif"
+            }
+        ]
+        setInterval(() => {
+            const rndInt = Math.floor(Math.random() * 3) + 1;
+            // console.log(rndInt);
+            setImageLink(images_[rndInt].image)
+            console.log(imglink)
+        }, 4000)
 
     }, [])
     return(
         <div className="alltipsbox mt-5 ">
         <div className="container-fluid">
             <Navbar/>
-            
+            <div className="row container-fluid mt-4">
+                            <div className="col-md-4">
+                            <Link href="https://bit.ly/3962hYe"><a><img className="adImg" src={imglink} style={{width: "100%", height: "100px", imageFit: "cover"}} /></a></Link>
+                            </div>
+                            <div className="col-md-4">
+                                <center>
+                                <h6>Register & deposit on 1XBET here</h6>
+                                <p>PROMO CODE :BOOMBET201</p>
+                                
+                                <Link href="https://bit.ly/3962hYe"><a className="btn btn-primary">Register on 1XBET</a></Link>
+                                </center>
+                            </div>
+                            <div className="col-md-4">
+                            <Link href="https://bit.ly/3962hYe"><a><img className="adImg secondimage" src={imglink} style={{width: "100%", height: "100px", imageFit: "cover"}} /></a></Link>
+                            </div>
+                        </div>
         <div className="alltipslabel"><h4>Daily 2 Odds Tips</h4></div>
-        <div style={{height: 400, overflowY: "auto"}}>
+        <div>
                          {
                             user.status === "VIP Member" ?
                             freeTips.map((obj, index) => {
@@ -68,7 +108,16 @@ function Freetips(){
                                             <div className="pt-2 row">
                                                 <div className=" alltipsodd col-sm-4 col-3"><p>{obj.odd}</p></div>
                                                 <div className=" alltipspredict col-sm-4 col-6">{obj.comment} </div>
-                                                <div className=" alltipsicon col-sm-4 col-3" style={{fontSize: 9, fontWeight: "900"}}>{obj.status_text}</div>
+                                                <div className=" alltipsicon col-sm-4 col-3" style={{fontSize: 9, fontWeight: "900"}}>{
+                                                    
+                                                    obj.status_icon === "autorenew"
+                                                     ? 
+                                                     <span className="fa fa-sync" style={{color: "white", background: "orange", padding: 10, borderRadius: 300, fontSize: 20}}></span> 
+                                                     : obj.status_icon === "check" ?
+                                                     <span className="fa fa-check" style={{color: "white", background: "green", padding: 10, borderRadius: 300, fontSize: 20}}></span>
+                                                     :
+                                                     <span className="fa fa-times" style={{color: "white", background: "red", padding: 15, borderRadius: 300, fontSize: 20}}></span>
+                                                }</div>
                                             </div> 
                                         </div>
                                     </div>
