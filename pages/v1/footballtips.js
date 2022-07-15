@@ -82,57 +82,111 @@ function Freetips(){
                             </div>
                         </div>
         <div className="alltipslabel"><h4>Football Tips</h4></div>
-        <div>
+        <div className="row px-3" >
+            <div className="col-md-6 mt-3" style={{backgroundColor: "#fff", padding: 20, boxShadow: "1px 1px 11px 1px #c4c5c6", borderRadius: 20}}>
+                <button className="btn btn-info p-3 w-100">Upcoming Games</button>
                          {
                             user.status === "VIP Member" ?
                             freeTips.map((obj, index) => {
-                                return(
+                                if(obj.status_icon === "autorenew"){
+                                    return(
                                     <div key={index} className="row mt-3" style={{border: "2px solid #c4c5c6", padding: 10}}>
                                         <div className=" col-sm-4"> 
                                             <div className= " alltipseventname row">
                                                 <div className="col-sm-2 col-2"><i className="fas fa-futbol"></i></div>
                                                 <div className="col-sm-10 col-10">
-                                                    <h6>{obj.title}</h6> 
-                                                    <p>{obj.created_at}</p> 
+                                                    <p style={{fontWeight: "800", fontSize: 11}}>{obj.title}</p> 
+                                                    <p style={{fontWeight: "500", fontSize: 11}}>{obj.created_at}</p> 
                                                 </div>   
                                             </div>
                                         </div>
                                         <div className="col-sm-4">
                                             <div className="row alltipsgame ">
-                                                <div className="col-sm-5 col-5"><h6>{obj.club_one}</h6></div>
+                                                <div className="col-sm-5 col-5"><h6 style={{fontWeight: "800", fontSize: 11}}>{obj.club_one}</h6></div>
                                                 <div className="col-sm-2 col-2"><p>-</p></div>
-                                                <div className="col-sm-5 col-5">  <h6>{obj.club_two}</h6></div> 
+                                                <div className="col-sm-5 col-5">  <h6 style={{fontWeight: "800", fontSize: 11}}>{obj.club_two}</h6></div> 
                                             </div>
                                         </div>
                                         <div className="col-sm-4">
                                             <div className="pt-2 row">
-                                                <div className=" alltipsodd col-sm-4 col-3"><p>{obj.odd}</p></div>
-                                                <div className=" alltipspredict col-sm-4 col-6">{obj.comment} </div>
+                                                <div className=" alltipsodd col-sm-4 col-3"><p style={{fontWeight: "800", fontSize: 11}}>{obj.odd}</p></div>
+                                                <div className=" alltipspredict col-sm-4 col-6" style={{fontWeight: "800", fontSize: 11}}>{obj.comment} </div>
                                                 <div className=" alltipsicon col-sm-4 col-3" style={{fontSize: 9, fontWeight: "900"}}>{
                                                     
                                                     obj.status_icon === "autorenew"
-                                                     ? 
-                                                     <span className="fa fa-sync" style={{color: "white", background: "orange", padding: 10, borderRadius: 300, fontSize: 20}}></span> 
-                                                     : obj.status_icon === "check" ?
-                                                     <span className="fa fa-check" style={{color: "white", background: "green", padding: 10, borderRadius: 300, fontSize: 20}}></span>
-                                                     :
-                                                     <span className="fa fa-times" style={{color: "white", background: "red", padding: 15, borderRadius: 300, fontSize: 20}}></span>
+                                                    ? 
+                                                    <span className="fa fa-sync" style={{color: "white", background: "orange", padding: 10, borderRadius: 300, fontSize: 15}}></span> 
+                                                    : obj.status_icon === "check" ?
+                                                    <span className="fa fa-check" style={{color: "white", background: "green", padding: 10, borderRadius: 300, fontSize: 15}}></span>
+                                                    :
+                                                    <span className="fa fa-times" style={{color: "white", background: "red", padding: 15, borderRadius: 300, fontSize: 15}}></span>
                                                 }</div>
                                             </div> 
                                         </div>
                                     </div>
-                                )
-                            })                            
+                                    );
+                                }     
+                            })
                             :
                             <center>
                                 <h5>This page is for VIP Members</h5>
                             </center>
                          }
-            
-                        </div>
-            <div className="mt-5">
-                <Footer/>
             </div>
+            <div className="col-md-6 mt-3" style={{backgroundColor: "#fff", padding: 20, boxShadow: "1px 1px 11px 1px #c4c5c6", borderRadius: 20}}>
+                <button className="btn btn-primary p-3 w-100">Older Game Results</button>
+                         {
+                            user.status === "VIP Member" ?
+                            freeTips.map((obj, index) => {
+                                if(obj.status_icon === "check" || obj.status_icon === "close"){
+                                    return(
+                                    <div key={index} className="row mt-3" style={{border: "2px solid #c4c5c6", padding: 10}}>
+                                        <div className=" col-sm-4"> 
+                                            <div className= " alltipseventname row">
+                                                <div className="col-sm-2 col-2"><i className="fas fa-futbol"></i></div>
+                                                <div className="col-sm-10 col-10">
+                                                    <p style={{fontWeight: "800", fontSize: 11}}>{obj.title}</p> 
+                                                    <p style={{fontWeight: "500", fontSize: 11}}>{obj.created_at}</p> 
+                                                </div>   
+                                            </div>
+                                        </div>
+                                        <div className="col-sm-4">
+                                            <div className="row alltipsgame ">
+                                                <div className="col-sm-5 col-5"><h6 style={{fontWeight: "800", fontSize: 11}}>{obj.club_one}</h6></div>
+                                                <div className="col-sm-2 col-2"><p>-</p></div>
+                                                <div className="col-sm-5 col-5">  <h6 style={{fontWeight: "800", fontSize: 11}}>{obj.club_two}</h6></div> 
+                                            </div>
+                                        </div>
+                                        <div className="col-sm-4">
+                                            <div className="pt-2 row">
+                                                <div className=" alltipsodd col-sm-4 col-3"><p style={{fontWeight: "800", fontSize: 11}}>{obj.odd}</p></div>
+                                                <div className=" alltipspredict col-sm-4 col-6" style={{fontWeight: "800", fontSize: 11}}>{obj.comment} </div>
+                                                <div className=" alltipsicon col-sm-4 col-3" style={{fontSize: 9, fontWeight: "900"}}>{
+                                                    
+                                                    obj.status_icon === "autorenew"
+                                                    ? 
+                                                    <span className="fa fa-sync" style={{color: "white", background: "orange", padding: 10, borderRadius: 300, fontSize: 15}}></span> 
+                                                    : obj.status_icon === "check" ?
+                                                    <span className="fa fa-check" style={{color: "white", background: "green", padding: 10, borderRadius: 300, fontSize: 15}}></span>
+                                                    :
+                                                    <span className="fa fa-times" style={{color: "white", background: "red", padding: 15, borderRadius: 300, fontSize: 15}}></span>
+                                                }</div>
+                                            </div> 
+                                        </div>
+                                    </div>
+                                    );
+                                }     
+                            })
+                            :
+                            <center>
+                                <h5>This page is for VIP Members</h5>
+                            </center>
+                         }
+            </div>
+        </div>
+        <div className="mt-5">
+            <Footer/>
+        </div>
     </div>
     </div>
     )
