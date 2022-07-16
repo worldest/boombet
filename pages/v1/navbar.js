@@ -16,7 +16,7 @@ function Navbar(){
     <>
         <div className="navbox container-fluid row">
             <div className=" navlogo col-md-9 col-9">
-                <h3>Boom<i>Bet</i></h3>
+                <h3>BoomBet</h3>
             </div>
             <div className="col-md-3 col-3">
                 <Link href="#logout"><a onClick={() => {
@@ -64,7 +64,7 @@ function Navbar(){
     
         <div className="navbox container-fluid row">
         <div className=" navlogo col-sm-7">
-            <h3>Boom<i>Bet</i></h3>
+            <h3>BoomBet</h3>
         </div>
         <div className=" navlinks col-sm-1">
             <Link href="/v1/dashboard">
